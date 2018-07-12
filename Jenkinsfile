@@ -26,8 +26,7 @@ pipeline {
         echo "Deploying ${APP_VERSION}."
       }
     }
-  }
-  stage('Get Kernel') {
+    stage('Get Kernel') {
       steps {
         script {
           try {
@@ -44,6 +43,8 @@ pipeline {
         echo "${KERNEL_VERSION}"
       }
     }
+  }
+  
   environment {
     MY_NAME = 'Kurt'
     TEST_USER = credentials('test-user')
